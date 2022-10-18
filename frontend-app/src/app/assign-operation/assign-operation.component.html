@@ -1,5 +1,13 @@
-<div>
-    <span>{{sessionStorage.getItem('complaintInfo')}}</span>
+<div class="form-style-2">
+<div class="form-style-2-heading">Assign Tickets To Engineers</div>
 
- <span>{{complaint}}</span>
+<form [formGroup]="engineerRef" >
+<label for="field1"><span>TicketId<span class="required">*</span></span><input type="text" class="input-field"   readonly formControlName="tid" /></label>
+<label for="field2"><span>Pin Code <span class="required">*</span></span><input type="text" class="input-field"   readonly formControlName="pincode"/></label>
+<label for="field3"><span>Complaint<span class="required">*</span></span><textarea name="field3" class="textarea-field"  formControlName="reason" readonly></textarea></label>
+<label for="field4"><span>Status<span class="required">*</span></span><input type="text" class="input-field"  formControlName="status" readonly/></label>
+<label for="field5"><span>User ID<span class="required">*</span></span><input type="text" class="input-field"   formControlName="userid" readonly/></label>
+<label for="field6"><span>Employee ID<span class="required">*</span></span><input type="text" class="input-field" formControlName="eid"/></label>
+<label><span> </span><input type="submit" value="Submit" /></label>
+</form>
 </div>
