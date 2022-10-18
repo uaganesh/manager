@@ -1,0 +1,12 @@
+table{
+    width: auto !important;
+}
+
+.table td,th {
+    text-align: center;
+    } 
+
+h2{
+    text-align: center;
+    padding-top: 10px;
+}

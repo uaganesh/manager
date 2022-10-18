@@ -4,21 +4,26 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-@Entity
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity(name = "complaints")
 public class Complaints {
 	
 @Id
 int tid;
 @Column(name = "userid")
-String userid;
+int userid;
 @Column(name = "reason")
 String reason;
 @Column(name = "status")
 String status;
+@JsonIgnore
 @Column(name="eid")
-String eid;
+Integer eid;
 @Column(name = "pincode")
 int pincode;
+
+
 
 public int getTid() {
 	return tid;
@@ -26,10 +31,10 @@ public int getTid() {
 public void setTid(int tid) {
 	this.tid = tid;
 }
-public String getUserid() {
+public int getUserid() {
 	return userid;
 }
-public void setUserid(String userid) {
+public void setUserid(int userid) {
 	this.userid = userid;
 }
 public String getReason() {
@@ -44,10 +49,10 @@ public String getStatus() {
 public void setStatus(String status) {
 	this.status = status;
 }
-public String getEid() {
+public int getEid() {
 	return eid;
 }
-public void setEid(String eid) {
+public void setEid(int eid) {
 	this.eid = eid;
 }
 public int getPincode() {
@@ -56,13 +61,11 @@ public int getPincode() {
 public void setPincode(int pincode) {
 	this.pincode = pincode;
 }
-
 @Override
 public String toString() {
 	return "Complaints [tid=" + tid + ", userid=" + userid + ", reason=" + reason + ", status=" + status + ", eid="
 			+ eid + ", pincode=" + pincode + "]";
 }
-
 
 
 

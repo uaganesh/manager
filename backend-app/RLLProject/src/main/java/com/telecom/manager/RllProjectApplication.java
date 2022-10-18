@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
-@SpringBootApplication(scanBasePackages = "com.telecom.manager")
-@EntityScan(basePackages = "com.telecom.manager.bean")
+@SpringBootApplication(scanBasePackages = {"com.telecom.manager","com.telecom.complaint"})
+@EntityScan(basePackages = {"com.telecom.manager.bean","com.telecom.complaint.bean"})
 
 public class RllProjectApplication {
 

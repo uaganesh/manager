@@ -13,10 +13,9 @@ public class Manager {
 	String name;
 	@Column(name="email")
 	String email;
-	@Override
-	public String toString() {
-		return "Manager [mid=" + mid + ", name=" + name + ", email=" + email + "]";
-	}
+	@Column(name = "pincode")
+	int pincode;
+	
 	public int getMid() {
 		return mid;
 	}
@@ -35,6 +34,14 @@ public class Manager {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	public int getPincode() {
+		return pincode;
+	}
+	public void setPincode(int pincode) {
+		this.pincode = pincode;
+	}
+	
+	
 	
 	
 	
